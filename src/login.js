@@ -10,7 +10,7 @@ document.getElementById ('login-btn').addEventListener ('click', () => {
     if ( typeof inputNumber.value ==="string" && typeof inputPassword.value === "string") {
 
         alert ('Login Succesfully')
-        window.location.assign ("/home")
+        window.location.assign ("/home.html")
     }else {
 
           alert ('Please type placeholder number')
