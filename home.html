@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite-project</title>
+
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="shortcut icon" href="./public/Logo-full.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gradient-to-b from-neutral-50 to-neutral-100 min-h-screen font-[Outfit]">
+    <header class="w-11/12 max-w-6xl mx-auto py-10 md:py-16">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6 border-b border-neutral-200 pb-6">
+        <div class="flex gap-4 items-center">
+          <div class="w-[120px] md:w-[150px]">
+            <img src="./public/logo.png" alt="" />
+          </div>
+
+          <div>
+            <p class="text-2xl md:text-3xl font-semibold">
+              $ <span id="right-blance">5000</span>
+            </p>
+            <p class="text-base md:text-lg text-gray-500">Available Balance</p>
+          </div>
+        </div>
+
+        <div>
+          <a href="./index.html" class="btn btn-neutral rounded-full px-6 text-base md:text-lg">
+            <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Logout
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl md:text-4xl font-bold pt-6">
+        Welcome to Pay<span class="text-purple-500">oo</span>
+      </h2>
+      <p class="text-base md:text-lg text-gray-500 mt-2 max-w-2xl">
+        Enjoy easy and convenient financial services with us. Cashout charge is low and
+      </p>
+    </header>
+
+    <!-- Options Grid -->
+    <section class="w-11/12 max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mt-8 md:mt-10">
+      <button
+        id="add_money"
+        class="group flex flex-col items-center justify-center bg-white py-6 md:py-8 rounded-2xl shadow-sm hover:shadow-lg border border-neutral-100 hover:border-purple-200 transition active:scale-[0.98]"
+      >
+        <img class="w-[52px] md:w-[60px] group-hover:scale-110 transition" src="./public/opt-1.png" alt="" />
+        <p class="text-sm md:text-base font-semibold mt-3 text-gray-700">Wtith Draw</p>
+      </button>
+
+      <button
+        id="with"
+        class="group flex flex-col items-center justify-center bg-white py-6 md:py-8 rounded-2xl shadow-sm hover:shadow-lg border border-neutral-100 hover:border-purple-200 transition active:scale-[0.98]"
+      >
+        <img class="w-[52px] md:w-[60px] group-hover:scale-110 transition" src="./public/opt-2.png" alt="" />
+        <p class="text-sm md:text-base font-semibold mt-3 text-gray-700">Add Money</p>
+      </button>
+
+      <button
+        id="transferMoneyBtn"
+        class="group flex flex-col items-center justify-center bg-white py-6 md:py-8 rounded-2xl shadow-sm hover:shadow-lg border border-neutral-100 hover:border-purple-200 transition active:scale-[0.98]"
+      >
+        <img class="w-[52px] md:w-[60px] group-hover:scale-110 transition" src="./public/opt-3.png" alt="" />
+        <p class="text-sm md:text-base font-semibold mt-3 text-gray-700">Trnsfer Money</p>
+      </button>
+
+      <button id="get-bonus"
+        class="group flex flex-col items-center justify-center bg-white py-6 md:py-8 rounded-2xl shadow-sm hover:shadow-lg border border-neutral-100 hover:border-purple-200 transition active:scale-[0.98]"
+      >
+        <img class="w-[52px] md:w-[60px] group-hover:scale-110 transition" src="./public/opt-4.png" alt="" />
+        <p class="text-sm md:text-base font-semibold mt-3 text-gray-700">Get Bnouse</p>
+      </button>
+
+      <button id="pay-bill-btn"
+        class="group flex flex-col items-center justify-center bg-white py-6 md:py-8 rounded-2xl shadow-sm hover:shadow-lg border border-neutral-100 hover:border-purple-200 transition active:scale-[0.98]"
+      >
+        <img class="w-[52px] md:w-[60px] group-hover:scale-110 transition" src="./public/opt-5.png" alt="" />
+        <p class="text-sm md:text-base font-semibold mt-3 text-gray-700">Pay Bill</p>
+      </button>
+
+      <button
+        id="transactions"
+        class="group flex flex-col items-center justify-center bg-white py-6 md:py-8 rounded-2xl shadow-sm hover:shadow-lg border border-neutral-100 hover:border-purple-200 transition active:scale-[0.98]"
+      >
+        <img class="w-[52px] md:w-[60px] group-hover:scale-110 transition" src="./public/opt-6.png" alt="" />
+        <p class="text-sm md:text-base font-semibold mt-3 text-gray-700">Transactions</p>
+      </button>
+    </section>
+
+    <!-- Withdraw section -->
+    <section id="sec1" class="w-11/12 max-w-3xl mx-auto py-10 hidden">
+      <h4 class="text-2xl md:text-3xl font-semibold mb-4">With Draw</h4>
+
+      <fieldset class="bg-white border border-neutral-200 rounded-2xl w-full mx-auto p-6 md:p-8 shadow-sm">
+        <label class="label text-neutral-800 text-base md:text-lg block py-3">Agent Number</label>
+        <input
+          maxlength="11"
+          minlength="11"
+          id="agent-number"
+          type="tel"
+          class="input rounded-full h-12 text-base w-full"
+          placeholder="01947540267"
+        />
+
+        <label class="label text-neutral-800 text-base md:text-lg mt-3 block py-3">Amount</label>
+        <input
+          id="amount"
+          type="number"
+          class="input rounded-full h-12 text-base w-full"
+          placeholder="Enter amount to withdraw"
+        />
+
+        <label class="label text-neutral-800 text-base md:text-lg mt-3 block py-3">Pin Number</label>
+        <input
+          id="pin-number"
+          type="password"
+          class="input rounded-full h-12 text-base w-full"
+          placeholder="1234"
+        />
+
+        <button id="withdraw-btn" class="btn btn-primary mt-5 w-full h-12 text-base md:text-lg rounded-full">
+          Withdraw Money
+        </button>
+      </fieldset>
+
+      <div class="text-center mt-10">
+        <p class="divider text-gray-800 text-xl md:text-2xl">Transactions ID Details</p>
+        <p class="py-3 text-lg md:text-xl" id="trans1w"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans4w"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans2w"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans3w"></p>
+      </div>
+    </section>
+
+    <!-- Add Money section -->
+    <section id="sec2" class="w-11/12 max-w-3xl mx-auto hidden py-12 md:py-16">
+      <div class="mb-4">
+        <p class="text-2xl md:text-3xl font-semibold">Add Money</p>
+      </div>
+
+      <fieldset class="bg-white border border-neutral-200 rounded-2xl w-full mx-auto p-6 md:p-8 shadow-sm">
+         <label class="text-2xl block py-3">Select A Bank</label>
+        <select id="select-bank" class="select select-success w-full rounded-full h-12">
+          <option disabled selected>Selec Bank</option>
+          <option>IBBl</option>
+          <option>Insurens</option>
+          <option>City Bank</option>
+        </select>
+
+        <br />
+
+        <label class="label text-neutral-800 text-base md:text-lg block py-3">Bank Account Number</label>
+        <input
+          maxlength="11"
+          minlength="11"
+          id="account-number"
+          type="number"
+          class="input w-full rounded-full h-12 text-base"
+          placeholder="Enter 11 digit account number"
+        />
+
+        <label class="label text-neutral-800 text-base md:text-lg mt-3 block py-3">Add Money</label>
+        <input
+          id="add-money"
+          type="number"
+          class="input w-full rounded-full h-12 text-base"
+          placeholder="Add Amount to withdraw"
+        />
+
+        <label class="label text-neutral-800 text-base md:text-lg mt-3 block py-3">Pin Number</label>
+        <input
+          id="add-pin"
+          type="password"
+          class="input w-full rounded-full h-12 text-base"
+          placeholder="Enter 4 digit pin number"
+        />
+
+        <button id="addMoney-btn" class="btn btn-primary mt-5 w-full h-12 text-base md:text-lg rounded-full">
+          Add Money
+        </button>
+      </fieldset>
+    </section>
+
+    <!-- Transfer Money section -->
+    <section id="sec3" class="w-11/12 max-w-3xl mx-auto py-12 md:py-16 hidden">
+      <h4 class="text-2xl md:text-3xl font-semibold mb-4">Transfer Money</h4>
+
+      <form class="bg-white border border-neutral-200 rounded-2xl w-full mx-auto p-6 md:p-8 shadow-sm">
+        <label class="label text-base md:text-lg block py-3">Number</label>
+        <input
+          id="transfer-number"
+          type="tel"
+          class="input validator w-full mx-auto rounded-full h-12 text-base"
+          placeholder="Enter 11digit number"
+          required
+        />
+
+        <label class="fieldset mt-4">
+          <span class="label text-base md:text-lg block py-3">Amount</span>
+          <input
+            id="transfer-amount"
+            type="number"
+            class="input validator w-full mx-auto rounded-full h-12 text-base"
+            placeholder="Enter amount to transfer"
+            required
+          />
+          <span class="validator-hint hidden">Required</span>
+        </label>
+
+        <fieldset class="fieldset mt-4">
+          <label class="label text-base md:text-lg block py-3">Pin Number</label>
+          <input
+            id="pin-number"
+            type="password"
+            class="input validator w-full mx-auto rounded-full h-12 text-base"
+            placeholder="Enter 4 digit pin number"
+            required
+          />
+          <p class="validator-hint hidden">Required</p>
+        </fieldset>
+
+        <div class="flex flex-col sm:flex-row gap-3 py-6 justify-center">
+          <button id="transferMoney-btn" class="btn btn-primary rounded-full w-full sm:w-auto" type="submit">
+            Send Now
+          </button>
+          <button class="btn btn-outline rounded-full w-full sm:w-auto" type="reset">
+            Reset
+          </button>
+        </div>
+      </form>
+
+      <div class="text-center mt-10">
+        <p class="divider text-gray-800 text-xl md:text-2xl">Transactions ID Details</p>
+        <p class="py-3 text-lg md:text-xl" id="trans1"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans4"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans2"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans3"></p>
+      </div>
+    </section>
+
+    <!-- Transactions Summary section -->
+    <section id="sec4" class="w-11/12 max-w-3xl mx-auto py-12 md:py-20 hidden space-y-2">
+       
+       <!-- history two -->
+       <div id="history1" class="flex justify-between bg-gray-200 p-2 rounded-md shadow-md">
+          <div class="flex gap-2 items-center">
+             <img class="w-[70px]" src="./public/wallet 1.png" alt="">
+             <div>
+                <p class="text-2xl py-1">With Draw history</p>
+                <p id="time1" class="text-gray-800"></p>
+               </div>
+            </div>
+            <span class="loading loading-ring loading-xl"></span>
+         </div>
+         <!-- with daraw tranction -->
+          <div id="details1" class="text-center mt-10 hidden">
+            <p class="divider text-gray-800 text-xl md:text-2xl">Transactions ID Details</p>
+
+            <p class="py-3 text-lg md:text-xl" id="trans1w1"></p>
+            <p class="py-3 text-lg md:text-xl" id="trans4w4"></p>
+            <p class="py-3 text-lg md:text-xl" id="trans2w2"></p>
+            <p class="py-3 text-lg md:text-xl" id="trans3w3"></p>
+          </div>
+         <!-- history one -->
+         <div id="history2" class="flex justify-between bg-gray-200 p-2 rounded-md shadow-md">
+            <div class="flex gap-2 items-center">
+                <img class="w-[70px]" src="./public/wallet 1.png" alt="">
+                <div>
+                 <p class="text-2xl py-1">Transfer hestory</p>
+                 <p id="time2" class="text-gray-800">Today</p>
+              </div>
+            </div>
+             <span class="loading loading-ring loading-xl"></span>
+         </div>
+   
+         <!-- transfer Money -->
+         <div id="details2" class="text-center hidden">
+            <p class="divider text-gray-800 text-xl md:text-2xl">Transactions ID Details</p>
+            <p class="py-3 text-lg md:text-xl" id="trans11"></p>
+           <p class="py-3 text-lg md:text-xl" id="trans44"></p>
+           <p class="py-3 text-lg md:text-xl" id="trans22"></p>
+           <p class="py-3 text-lg md:text-xl" id="trans33"></p>
+         </div>
+
+        <!-- history three -->
+       <div id="history3" class="flex justify-between bg-gray-200 p-2 rounded-md shadow-md">
+         <div class="flex gap-2 items-center">
+             <img class="w-[70px]" src="./public/wallet 1.png" alt="">
+             <div>
+              <p class="text-2xl py-1">Pay Bill hestory</p>
+              <p id="time3" class="text-gray-800">Today</p>
+           </div>
+         </div>
+          <span class="loading loading-ring loading-xl"></span>
+      </div>
+      <!--payBill Transction section -->
+      <div id="details3" class="text-center mt-10 hidden">
+        <p class="divider text-gray-800 text-xl md:text-2xl">Transactions ID Details</p>
+        <p class="py-3 text-lg md:text-xl" id="trans11p"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans44p"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans22p"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans33p"></p>
+      </div>
+    </section>
+
+
+    <!-- pay bill section Start -->
+ <section id="sec5" class="w-11/12 max-w-3xl mx-auto py-12 hidden md:py-16">
+  <div class="mb-4">
+    <p class="text-2xl md:text-3xl font-semibold">Pay Bill</p>
+  </div>
+
+  <fieldset class="bg-white border border-neutral-200 rounded-2xl w-full mx-auto p-6 md:p-8 shadow-sm">
+    
+
+    <div class="space-y-6">
+      
+      <div class="space-y-2">
+        <label class="text-[20px]  mb-3 block">Select to pay</label> 
+        <select id="select-option" class="select select-success w-full rounded-full h-12">
+          <option disabled selected>Select Option</option>
+          <option>Electricity</option>
+          <option>Gas</option>
+          <option>Water</option>
+        </select>
+      </div>
+
+      <div class="space-y-2">
+        <label class="label text-neutral-800 text-base md:text-lg mb-3 block">Biller Account Number</label>
+        <input
+          maxlength="11"
+          minlength="11"
+          id="payBillAccount-number"
+          type="number"
+          class="input w-full rounded-full h-12 text-base"
+          placeholder="Enter 11 digit account number"
+        />
+      </div>
+
+      <div class="space-y-2">
+        <label class="label text-neutral-800 text-base md:text-lg mb-3 block">Amount to pay</label>
+        <input
+          id="payBill-money"
+          type="number"
+          class="input w-full rounded-full h-12 text-base"
+          placeholder="Add Amount to pay"
+        />
+      </div>
+
+      <div class="space-y-2">
+        <label class="label text-neutral-800 text-base md:text-lg mb-3 block">Pin Number</label>
+        <input
+          id="payBill-pin"
+          type="password"
+          class="input w-full rounded-full h-12 text-base"
+          placeholder="Enter 4 digit pin number"
+        />
+      </div>
+
+      <button id="payBill-btn" class="btn btn-primary w-full h-12 text-base md:text-lg rounded-full">
+        Pay Bill
+      </button>
+
+    </div>
+  </fieldset>
+
+      <div class="text-center mt-10">
+        <p class="divider text-gray-800 text-xl md:text-2xl">Transactions ID Details</p>
+        <p class="py-3 text-lg md:text-xl" id="trans1p"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans4p"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans2p"></p>
+        <p class="py-3 text-lg md:text-xl" id="trans3p"></p>
+      </div>
+</section>
+
+    <!-- pay bill section End -->
+  
+
+    <!-- get bonus Section -->
+<section id="sec6" class="w-11/12 max-w-xl mx-auto py-10 hidden">
+
+  <h4 class="text-2xl md:text-3xl font-semibold mb-4">
+    Get Bonus
+  </h4>
+
+  <fieldset class="bg-white border border-neutral-200 rounded-2xl w-full p-6 md:p-8 shadow-sm relative">
+
+    <!-- label + toggle -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+      <label class="text-neutral-800 text-base md:text-lg">
+        Enter Bonus Coupon and press icon to see coupon
+      </label>
+
+      <div class="relative">
+
+        <p id="easin"
+        class="text-sm md:text-base text-blue-600 border border-blue-500 px-2 py-1 rounded-md absolute right-0 -top-2 md:-top-11 hidden bg-white">
+        Developer Easin
+        </p>
+
+        <input id="icon" type="checkbox" class="toggle toggle-primary" />
+
+      </div>
+
+    </div>
+
+    <!-- input -->
+    <input
+      id="copun"
+      type="text"
+      class="input rounded-full h-12 text-base w-full mt-4"
+      placeholder="Enter Your Coupon"
+    />
+
+    <!-- button -->
+    <button
+      id="get_bonus"
+      class="btn btn-primary mt-5 w-full h-12 text-base md:text-lg rounded-full">
+      Get Bonus
+    </button>
+
+  </fieldset>
+
+</section>
+
+    <script type="module" src="./src/addMoney.js"></script>
+    <script type="module" src="./src/chasOut.js"></script>
+    <script type="module" src="./src/transferMoney.js"></script>
+    <script type="module" src="./src/paybill.js"></script>
+    <script type="module" src="./src/copun.js"></script>
+  </body>
+</html>

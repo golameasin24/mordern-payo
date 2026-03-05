@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@plugin "daisyui" {
+  themes: light --default, light --prefersdark, cupcake;
+}
+
+*{
+
+    font-family: "Outfit", sans-serif;
+}

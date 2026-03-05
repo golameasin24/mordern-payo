@@ -1,0 +1,34 @@
+<!doctype html>
+<html   lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite-project</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="shortcut icon" href="./public/Logo-full.png" type="image/x-icon">
+  </head>
+  <body class="bg-neutral-100 w-11/12 mx-auto min-h-screen ">
+    <section >
+          <div class="w-[300px] mx-auto py-16">
+              <div class="py-10">
+                   <img src="./public/Logo-full.png" alt="">
+              </div>
+              <div>
+                    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                    <label class="label text-neutral-800">Phone number</label>
+                    <input maxlength="11" minlength="11" id="number-input" type="tel" class="input rounded-full" placeholder="example : 01947540267" />
+
+                    <label class="label text-neutral-800">Password</label>
+                    <input id="password-input"  type="password" class="input rounded-full" placeholder="To loging : 1234" />
+
+                    <button id="login-btn" class="btn btn-primary mt-4">Login</button>
+                    </fieldset>
+              </div>
+          </div>
+    </section>
+       
+    <script type="module" src="./src/login.js"></script>
+
+  </body>
+</html>
